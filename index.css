@@ -1,0 +1,72 @@
+.shanap{
+    position: absolute;
+    left: 350px;
+    width: 180px;
+    height: 180px;
+    color: black;
+    /* background-color: black; */
+    border-radius: 50%;
+    box-shadow: 150px 240px 0 0 currentColor,
+    300px 240px 0 0 currentColor;
+}
+.shanap::before{
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 150px;
+    /* background-color: brown; */
+    border-bottom: 130px solid black;
+    border-radius: 0 0 0 100%;
+    top: 139px;
+    left: 17px;
+    transform-origin: right 210px;
+    transform: rotate(-34deg);
+}
+
+.shanap::after{
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 150px;
+    /* background-color: brown; */
+    border-bottom: 130px solid black;
+    border-radius: 0 0 100% 0;
+    top: 130px;
+    left: 395px;
+    transform-origin: left 210px;
+    transform: rotate(34deg);
+}
+.shanap::before{
+  animation: danceleft 1s ease-in-out  infinite  ;
+}
+.shanap::after{
+    animation: danceright 1s ease-in-out 5ms infinite ;
+  }
+  @keyframes danceleft {
+    0%{
+        transform: rotate(-50deg);
+
+    }
+    50%{
+        transform: rotate(-34deg);
+
+    }
+    100%{
+        transform: rotate(-50deg);
+    }
+    
+  }
+  @keyframes danceright {
+    0%{
+        transform: rotate(50deg);
+
+    }
+    50%{
+        transform: rotate(34deg);
+
+    }
+    100%{
+        transform: rotate(50deg);
+    }
+    
+  }
